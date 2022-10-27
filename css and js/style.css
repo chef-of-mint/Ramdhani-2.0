@@ -1,0 +1,211 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: brown;
+}
+.box{
+    box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.2);
+}
+.container p{
+    display: inline-block;
+    color:#f6b319
+}
+.color{
+    color: brown;
+}
+.del{
+    text-align: right;
+    position: relative;
+    animation: move 10s infinite;
+}
+.del:hover{
+    animation-play-state: paused;
+    cursor: pointer;
+}
+img.bike{
+    height: 50px;
+    width: 50px;
+}
+#header-nav{
+    background-color: #f6b319;
+    border-radius: 0px;
+    border:0px;
+    color: brown;
+}
+.navbar-header h3{
+    margin-top: 5px;
+    margin-left:60px;
+}
+.navbar-header img{
+    margin-top:-8px;
+}
+.nav li i{
+    display: block;
+}
+.navbar-inverse .navbar-toggle, .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+    background-color: brown;
+    border-color: brown;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+    background-color:#f6b319;
+}
+.slidebox{
+    height: 70vh;
+}
+.centering{
+    text-align: center;
+}
+.bottom{
+    margin-bottom: 30px;
+}
+.saying{
+    color: #f6b319;
+    margin-bottom: 30px;
+}
+.saying h3{
+    color: #f6b319;
+}
+.btn{
+    background-color: brown;
+    color:#f6b319;
+    border: brown;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.btn:hover{
+    background-color: rgba(165, 42, 42, 0.7);
+    color:#f6b319;
+    padding: 10px 30px;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+    background-color: brown;
+    color: #f6b319;
+}
+
+.modal-content{
+    background-color: #f6b319;
+    color: brown;
+}
+.col-md-9{
+    background-color: brown;
+    color: #f6b319;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.image img{
+    width:70px;
+    height:70px;
+    margin-right: 10px;
+}
+.container h2{
+    color:#f6b319;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 5px 10px 10px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+  }
+  
+.flip-card {
+    background-color: transparent;
+    width:300px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    perspective: 1000px;
+}
+  
+
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+  
+.flip-card-front {
+    background-color: #bbb;
+    color: #f6b319;
+    text-align: center;
+}
+.flip-card-front img{
+    width:300px;
+    height:300px; 
+    border-radius: 10px;
+}
+  
+.flip-card-back {
+    background-color: #f6b319;
+    color: brown;
+    transform: rotateY(180deg);
+}
+.flip-card-back h3{
+    margin-top:100px;
+}
+.flip-card-back p{
+    display: block;
+    color:brown;
+}
+.flip-card-back a{
+    text-decoration: none;
+    background-color: brown;
+    color: #f6b319;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.flip-card-back a:hover{
+    background-color: rgba(165, 42, 42, 0.74);
+    padding: 10px 30px;
+}
+
+.bg-footer{
+    background-color: #f6b319;
+}
+footer i{
+    margin:20px;
+    font-size: 30px;
+    color:brown
+}
+img.blur{
+    filter: brightness(0.50);
+}
+.flip-card-front h3{
+    position: absolute;
+    top:120px;
+    transform: translate(-50%,-50%);
+    left:50%;
+}
+
+@keyframes move{
+    0%{
+        transform: translateX(-80%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+@media  screen and (max-width:990px) {
+    .navbar-header h3{
+        margin-left:0px;
+    }
+}
