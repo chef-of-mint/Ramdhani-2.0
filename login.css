@@ -1,4 +1,4 @@
-    
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
@@ -46,8 +46,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid #343a40;
+	background-color: #343a40;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -119,6 +119,7 @@ input {
 }
 
 .sign-up-container {
+	
 	left: 0;
 	width: 50%;
 	opacity: 0;
@@ -160,9 +161,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: #343a40;
+	background: -webkit-linear-gradient(to right, #4c7093, #343a40);
+	background: linear-gradient(to right, #4c7093, #343a40);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -224,29 +225,4 @@ input {
 	margin: 0 5px;
 	height: 40px;
 	width: 40px;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
 }
