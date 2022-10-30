@@ -1,4 +1,41 @@
-nav {
+body{
+  background-color: rgb(77, 82, 82);
+}
+
+#id1{
+  display: flex;
+  justify-content:space-evenly;
+}
+
+#id2{
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nav {
     position: sticky;
     top: 0;
     left: 0;
@@ -9,6 +46,9 @@ nav {
     padding: 1.5rem 3.5rem;
     background-color: var(--bg-color);
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  body{
+    background-color: black;
   }
 
   nav h1 {
@@ -25,6 +65,7 @@ nav {
   }
   
   nav ul {
+    list-style: none;
     display: flex;
     gap: 1.9rem;
   }
@@ -41,3 +82,9 @@ nav {
     cursor: pointer;
     display: none;
   }
+
+  img{
+    border: 2px solid rgb(126, 255, 126) ;
+    border-radius: 50%;
+  } */
+
