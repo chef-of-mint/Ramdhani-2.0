@@ -3,6 +3,22 @@ body{
     padding: 0px;
     background: #343a40;
 }
+.imgtext{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: white;
+    text-shadow: 6px 6px 5px #1E252B;
+    font-family: 'Oswald';
+}
+#fourth{
+ transform: translateX(100%);
+}
+.footer-copyright{
+    color: #dbe0e6;
+}
 .box{
     box-shadow: 10px 10px 10px 5px rgba(0,0,0,0.2);
 }
@@ -11,7 +27,7 @@ body{
     color:#f8f9fa
 }
 .color{
-    color: #343a40;
+    color: #ffffff;
 }
 .del{
     text-align: right;
@@ -27,14 +43,18 @@ img.bike{
     width: 50px;
 }
 #header-nav{
-    background-color: #f8f9fa;
+    background-color: #1E252B;
     border-radius: 0px;
     border:0px;
-    color: #343a40;
+    color: #ffffff;
 }
 .navbar-header h3{
+    transform: translateX(15px) translateY(3px);
     margin-top: 5px;
     margin-left:60px;
+    font-family: 'Oswald';
+    font-size: 30px;
+    color: #dbe0e6;
 }
 .navbar-header img{
     margin-top:-8px;
@@ -175,12 +195,12 @@ img.bike{
 }
 
 .bg-footer{
-    background-color: #f8f9fa;
+    background-color: #1E252B;
 }
 footer i{
     margin:20px;
     font-size: 30px;
-    color:#343a40
+    color:#dbe0e6;
 }
 img.blur{
     filter: brightness(0.50);
