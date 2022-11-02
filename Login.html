@@ -28,14 +28,15 @@ window.onload=function(){
 
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
-		<form action="#">
+		<form action="signup.php" method="POST">
 			<h1>Create Account</h1>
 			
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="text" name="c_name" placeholder="Name" />
+			<input type="email" name="c_email" placeholder="Email" />
+			<input type="password" name="c_pass"placeholder="Password" />
 			<button>Sign Up</button>
 		</form>
+
 	</div>
 	<div class="form-container sign-in-container">
 		<form action= "login.php" method="POST">
