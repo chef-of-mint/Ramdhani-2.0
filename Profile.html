@@ -2,202 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
-
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="Profile.css">
-
-    <!-- FontAwesome 5 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-</head>
-<body>
-    <!-- Navbar top -->
-    <div class="navbar-top">
-        <div class="title">
-            <h1>My Profile</h1>
-        </div>
-
-        <!-- Navbar -->
-        <ul>
-
-            <li>
-                <a href="#sign-out">
-                    <i class="fa fa-sign-out-alt fa-2x"></i>
-                </a>
-            </li>
-        </ul>
-        <!-- End -->
-    </div>
-    <!-- End -->
-
-    <!-- Sidenav -->
-    <div class="sidenav">
-        <div class="profile">
-            <img src="https://imdezcode.files.wordpress.com/2020/02/imdezcode-logo.png" alt="" width="100" height="100">
-
-            <div class="name">
-                ImDezCode
-            </div>
-
-        </div>
-
-        <div class="sidenav-url">
-            <div class="url">
-                <a href="#profile" class="active">Profile</a>
-                <hr align="center">
-            </div>
-
-        </div>
-    </div>
-    <!-- End -->
-
-    <!-- Main -->
-    <div class="main">
-        <h2>IDENTITY :</h2>
-        <div class="card">
-            <div class="card-body">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Name</td>
-                            <td>:</td>
-                            <td>ImDezCode</td>
-                        </tr>
-                        <tr>
-                            <td>Email</td>
-                            <td>:</td>
-                            <td>imdezcode@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <td>Balance</td>
-                            <td>:</td>
-                            <td>1000 $</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <h2>PREVIOUS ORDERS :</h2>
-        <div class="card">
-            <div class="card-body">
-              <form id="form1">
-      <div class="divTable">
-             <div class="headRow">
-                <div class="divCell" align="center">ORDER ID</div>
-                <div  class="divCell">TIME</div>
-                <div  class="divCell">VIEW</div>
-             </div>
-            <div class="divRow">
-                  <div class="divCell">001</div>
-                <div class="divCell">002</div>
-                <div class="divCell">003</div>
-            </div>
-            <div class="divRow">
-                <div class="divCell">xxx</div>
-                <div class="divCell">yyy</div>
-                <div class="divCell">www</div>
-           </div>
-            <div class="divRow">
-                <div class="divCell">ttt</div>
-                <div class="divCell">uuu</div>
-                <div class="divCell">Mkkk</div>
-           </div>
-
-      </div>
-  </form>
-
-</div>
-
-                </div>
-            </div>
-
-    <!-- End -->
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "Profile.css">
+
+    <link rel="stylesheet" href="Profile.css">
     <title>Profile</title>
 </head>
 <body>
-    <nav>
-        <h1 id="id1" style="color:purple;">Profile Page</h1>
-        <ul class="navigation">
-          <li><a href="#" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        <button class="burger-menu" id="burger-menu">
-          <ion-icon class="bars" name="menu-outline"></ion-icon>
-        </button>
-  </nav>
-  <div class="hero" id="about">
-    <img
-      src="https://i.stack.imgur.com/w2kfR.png" alt ="Profile pic" width="300" height="300"
-      alt="jane-doe"
-      loading="lazy"
-      class="hero-img"
-    />
-    <div class="bio animate__animated animate__shakeX">
-      <h2 class="bio-title">About Me </h2>
-      <p class="bio-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sed
-        dolorem fugit sapiente porro veniam pariatur dolore nostrum delectus
-        inventore tempore minus nemo, iste ullam illo laboriosam maiores
-        repudiandae quos!
-      </p>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <!-- Navbar Logo -->
+    <div class="logo">
+      <!-- Logo Placeholder for Inlustration -->
+      <a href="Profile.html"><i class="fa fa-angellist"></i> My Profile</a>
     </div>
-  </div>
-<input type="number" value="2" min="1">
 
+    <!-- Navbar Links -->
+    <ul id="menu">
+      <li><a href="Home.html">Home</a></li><!--
+   --><li><a href="Home.html#menu_section">Menu</a></li><!--
+   --><li><a href="Home.html#about_section">About</a></li><!--
+   --><li><a href="Home.html">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!-- Menu Icon -->
+<div class="menuIcon">
+  <span class="icon icon-bars"></span>
+  <span class="icon icon-bars overlay"></span>
+</div>
+
+
+<div class="overlay-menu">
+  <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+</div>
+    <div class="mycontainer">
+        <div class="modal">
+            <div class="avatar">
+                <img src="img/gamer.png" alt="IMAGE" height="110px" width="110px" >
+            </div>
+          <table>
+            <tbody>
+                <tr>
+                    <td class="lable">Name </td>
+                    <td class="invis">abcd</td>
+                    <td class="value">Abdullah</td>
+                </tr>
+                <tr>
+                    <td class="lable">Admission No </td>
+                    <td class="invis">abcd</td>
+                    <td class="value">20JE0016</td>
+                </tr>
+                <tr>
+                    <td class="lable">Email </td>
+                    <td class="invis">abcd</td>
+                    <td class="value">101mdabdullah@gmail.com</td>
+                </tr>
+                <tr>
+                    <td class="lable">Wallet Balance </td>
+                    <td class="invis">abcd</td>
+                    <td class="value">101 $</td>
+                </tr>
+            </tbody>
+          </table>
+          <div class="add_button"><button class="button button1">Add Money</button></div>
+        </div>
+      </div>
+
+      <div class="mycontainer_order">
+        <div class="modal">
+          <h2>Order List</h2>
+          <table>
+            <tbody>
+                <tr>
+                    <td class="lable">ID # </td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Name</td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Price</td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Quantity</td>
+                </tr>
+                <tr>
+                    <td class="lable">ID # </td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Name</td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Price</td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Quantity</td>
+                </tr>
+                <tr>
+                    <td class="lable">ID # </td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Name</td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Price</td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Quantity</td>
+                </tr>
+                <tr>
+                    <td class="lable">ID # </td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Name</td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Price</td>
+                    <td class="invis">abcdefghccc</td>
+                    <td class="value">Item_Quantity</td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
 </body>
-</html>-->
+</html>

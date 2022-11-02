@@ -10,13 +10,15 @@ body{
     color: #ffffff;
 }
 .about_home{
+    background-color: #1E252B;
+    
     margin-top: 100px;
     margin-bottom: 100px;
     display: flex;
 }
 .about_img{
-    width: 775px;
-    height: 700px;
+    width: 650px;
+    height: 600px;
 }
 .about_text{
     font-size: 18px;
@@ -238,9 +240,6 @@ img.blur{
         transform: translateX(0%);
     }
 }
-
-
-
 
 @media  screen and (max-width:990px) {
     .navbar-header h3{
