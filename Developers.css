@@ -1,34 +1,22 @@
 
-.add_button {
+.devs {
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: 260px 260px 260px 260px;
+  column-gap: 50px;
+  grid-auto-flow: column;
+}
+.info{
     display: flex;
     justify-content: center;
+    font-family: "Audiowide", sans-serif;
+    font-size: 17px;
+    color: rgb(232, 227, 221);
+    text-shadow: #1E252B;
+  }
+.img_ {
+    border-radius: 50%;
 }
-.button {
-  border-radius: 10%;
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
-  
-  .button1 {
-    background-color: rgba(255, 255, 255, 0); 
-    color: rgb(0, 0, 0); 
-    border: 2px solid #000000;
-  }
-  
-  .button1:hover {
-    background-color: #4CAF50;
-    color: white;
-    border: 2px solid #4CAF50;
-  }
 .avatar{
     display: flex;
     justify-content: center;
@@ -73,7 +61,7 @@
     .modal {
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.5);  
+      background-color: rgba(255, 255, 255, 0.201);  
     }
     .warning {
       display: none;
@@ -86,7 +74,7 @@
     width: 100%;
   }
   body {
-    background-image: url('img/about-section.jpg');
+    background-image: url('img/dev_bg_3.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
