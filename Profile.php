@@ -174,7 +174,7 @@
     </div>
   </div>
   
-  <div id="myModal" class="modal" style="display:none;">
+  <div id="myModal" class="modal_1" style="display:none;">
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
