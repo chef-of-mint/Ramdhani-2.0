@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script>
+    function myfunc(btn){
+      document.getElementsByClassName("bottom")[btn.id].classList.add("clicked");
+    }
+    function myremove(btn){
+      document.getElementsByClassName("bottom")[(btn.id/100)].classList.remove("clicked");
+    }
+  </script>
+  <?php
+  session_start();
+  $con = mysqli_connect("sql12.freesqldatabase.com", "sql12530306", "NcCwFRsvdq", "sql12530306");
+
+  if (mysqli_connect_errno()) {
+    echo "Failed to connect to Database: " . mysqli_connect_error();
+  }
+
+  if (!isset($_SESSION['customer_email'])) {
+    header("location: customer_login.php");
+  }
+  $user = $_SESSION['customer_email'];
+  ?>
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="items.css">
+  <title>Ramdhani</title>
+</head>
+
+<body>
+
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <nav id="navbar" class="">
+    <div class="nav-wrapper">
+      <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Inlustration -->
+        <a href="/Profile.html">Items Menu</a>
+      </div>
+
+      <!-- Navbar Links -->
+      <ul id="menu">
+        <li><a href="\Home.html">Home</a></li>
+        <!--
+   -->
+        <li><a href="/Home.html#menu_section">Menu</a></li>
+        <!--
+   -->
+        <li><a href="/Home.html#about_section">About</a></li>
+        <!--
+   -->
+        <li><a href="/Home.html">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Menu Icon -->
+  <div class="menuIcon">
+    <span class="icon icon-bars"></span>
+    <span class="icon icon-bars overlay"></span>
+  </div>
+
+
+  <div class="overlay-menu">
+    <ul id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="item_grid">
+
+    <?php
+    $queryGetGrocery = "SELECT item_name,item_price,item_url from Items where stall_id=4";
+    $runQueryGetGrocery = mysqli_query($con, $queryGetGrocery);
+    $i = 0;
+    while ($row = mysqli_fetch_assoc($runQueryGetGrocery)) {
+      $item_name = $row['item_name'];
+      $item_price = $row['item_price'];
+      $item_url = $row['item_url'];
+      echo '
+      <div class="wrapper">
+        <div class="container">
+          <div class="top" style="background:url(' . $item_url . ') no-repeat center center;"></div>
+          <div class="bottom">
+            <div class="left">
+              <div class="details">
+                <h1>' . $item_name . '</h1>
+                <p>£' . $item_price . '</p>
+              </div>
+              <div class="buy" id="'.$i.'" onclick="myfunc(this)" class="clicked"><i class="material-icons">add_shopping_cart</i></div>
+            </div>
+            <div class="right">
+              <div class="done"><i class="material-icons">done</i></div>
+              <div class="details">
+                <h1>Chair</h1>
+                <p>Added to your cart</p>
+              </div>
+              <div id="'.($i*100).'" class="remove" onclick="myremove(this)"><i class="material-icons">clear</i></div>
+            </div>
+          </div>
+        </div>
+        <div class="inside">
+          <div class="icon"><i class="material-icons">info_outline</i></div>
+          <div class="contents">
+            <table>
+              <tr>gaand marao bsdk</tr>
+            </table>
+          </div>
+        </div>
+      </div>';
+      $i++;
+    }
+    ?>
+  </div>
+  <div class="order_button"><button class="button button1">Place Order</button></div>
+</body>
+
+</html>
