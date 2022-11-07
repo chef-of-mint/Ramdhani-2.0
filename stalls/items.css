@@ -36,14 +36,13 @@ body {
   padding-left: 60px;
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 350px 350px;
   column-gap: 50px;
   row-gap: 40px;
   grid-auto-flow: row;
 }
 .wrapper {
   width: 300px;
-  height: 350px;
+  height: 500px;
   background: white;
   margin: 10px;
   overflow: hidden;
