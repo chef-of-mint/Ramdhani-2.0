@@ -1,4 +1,18 @@
-
+.container h2{
+  color:#f8f9fa;
+}
+.container p{
+  display: inline-block;
+  color:#f8f9fa
+}
+.dev_github {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 .devs {
     margin-left: 50px;
     display: grid;
@@ -68,8 +82,17 @@
     max-width: 100%;
     padding: 1rem 2rem;
   }
+  .modal:hover,
+.modal:active{
+  -webkit-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.386), 0 6px 12px rgba(255, 255, 255, 0.23) !important;
+    box-shadow: 0 6px 12px rgba(245, 245, 245, 0.16), 0 6px 12px rgba(255, 255, 255, 0.23) !important;
+  transform: translateY(-5px) !important;
+}
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .modal {
+      transition: 0.2s ease-in-out;
+      -webkit-box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16), 0 3px 6px rgba(255, 255, 255, 0.23) !important;
+      box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16), 0 3px 6px rgba(255, 255, 255, 0.23) !important;
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
       background-color: rgba(255, 255, 255, 0.201);  
