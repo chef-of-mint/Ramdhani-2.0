@@ -29,6 +29,18 @@
     width: 100%;
   }
 
+  /* .elevate {
+    transition: 0.2s ease-in-out;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
+  }
+  .elevate:hover,
+  .elevate:active{
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.23) !important;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.23) !important;
+    transform: translateY(-5px) !important;
+  } */
+
   .mycontainer_order {
     margin-top: 50px;
     display: flex;
@@ -56,7 +68,6 @@
     max-width: 100%;
     padding: 1rem 2rem;
   }
-  
   @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
     .modal {
       -webkit-backdrop-filter: blur(10px);

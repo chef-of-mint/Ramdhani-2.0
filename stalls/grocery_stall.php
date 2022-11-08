@@ -102,7 +102,7 @@
             <div class="right">
               <div class="done"><i class="material-icons">done</i></div>
               <div class="details">
-                <h1>Chair</h1>
+                <h1>' . $item_name . '</h1>
                 <p>Added to your cart</p>
               </div>
               <div id="'.($i*100).'" class="remove" onclick="myremove(this)"><i class="material-icons">clear</i></div>
@@ -113,7 +113,15 @@
           <div class="icon"><i class="material-icons">info_outline</i></div>
           <div class="contents">
             <table>
-              <tr>gaand marao bsdk</tr>
+            <tr>
+              <th><b>Name</b></th>
+              <th><b>Price</b></th>
+            </tr>
+            <tr>
+              
+              <td>' . $item_name . '</td>
+              <td>' . $item_price . '</td>
+              </tr>
             </table>
           </div>
         </div>

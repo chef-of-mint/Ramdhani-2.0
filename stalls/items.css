@@ -107,7 +107,7 @@ body {
   border-left: solid thin rgba(0, 0, 0, 0.1);
 }
 .wrapper .container .bottom .left .buy i {
-  font-size: 30px;
+  font-size: 15px;
   padding: 30px;
   color: #254053;
   transition: transform 0.5s;
@@ -140,7 +140,7 @@ body {
   height: 50%;
 }
 .wrapper .container .bottom .right .done i {
-  font-size: 30px;
+  font-size: 15px;
   padding: 30px;
   color: white;
 }
@@ -160,7 +160,7 @@ body {
 }
 .wrapper .container .bottom .right .remove i {
   transition: transform 0.5s;
-  font-size: 30px;
+  font-size: 15px;
   padding: 30px;
   color: white;
 }
@@ -218,7 +218,7 @@ body {
   color: white;
 }
 .wrapper .inside .contents p {
-  font-size: 13px;
+  font-size: 10px;
 }
 
 
