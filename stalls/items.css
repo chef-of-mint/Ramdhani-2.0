@@ -3,9 +3,10 @@ body {
   background: #343a40;
   font-family: sans-serif;
 }
-.add_button {
+.order_button {
+  margin: 40px;
   display: flex;
-  justify-content: right;
+  justify-content: center;
 }
 .button {
   background-color: #4CAF50; /* Green */
@@ -22,8 +23,8 @@ body {
 }
 
 .button1 {
-  background-color: rgba(255, 255, 255, 0); 
-  color: rgb(13, 13, 13); 
+  background-color: rgba(255, 255, 255, 0.244); 
+  color: rgb(255, 255, 255); 
   border: 2px solid #4CAF50;
 }
 

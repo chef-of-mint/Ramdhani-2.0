@@ -3,11 +3,20 @@
 
 <head>
 <script>
+    var my_id=[];
+    const ids = new Set();
     function myfunc(btn){
       document.getElementsByClassName("bottom")[btn.id].classList.add("clicked");
+      ids.add(btn.id);
+      my_id = Array.from(ids).join(' ');
+      document.cookie = "my_cookie="+JSON.stringify(my_id);
     }
     function myremove(btn){
-      document.getElementsByClassName("bottom")[(btn.id/100)].classList.remove("clicked");
+      document.getElementsByClassName("bottom")[(btn.id)].classList.remove("clicked");
+      //alert(btn.id/100);
+      ids.delete(btn.id);
+      my_id = Array.from(ids).join(' ');
+      document.cookie = "my_cookie="+JSON.stringify(my_id);
     }
   </script>
   <?php
@@ -94,7 +103,7 @@
           <div class="bottom">
             <div class="left">
               <div class="details">
-                <h1>' . $item_name . '</h1>
+                <h3>' . $item_name . '</h3>
                 <p>£' . $item_price . '</p>
               </div>
               <div class="buy" id="'.$i.'" onclick="myfunc(this)" class="clicked"><i class="material-icons">add_shopping_cart</i></div>
@@ -102,10 +111,10 @@
             <div class="right">
               <div class="done"><i class="material-icons">done</i></div>
               <div class="details">
-                <h1>' . $item_name . '</h1>
+                <h3>' . $item_name . '</h3>
                 <p>Added to your cart</p>
               </div>
-              <div id="'.($i*100).'" class="remove" onclick="myremove(this)"><i class="material-icons">clear</i></div>
+              <div id="'.$i.'" class="remove" onclick="myremove(this)"><i class="material-icons">clear</i></div>
             </div>
           </div>
         </div>
@@ -130,7 +139,8 @@
     }
     ?>
   </div>
-  <div class="order_button"><button class="button button1">Place Order</button></div>
+  
+  <div class="order_button"><form action="place_order.php" method="post"><input class="button button1" name="btn-po" type="submit" value="Place Order"></form></div>
 </body>
 
 </html>
