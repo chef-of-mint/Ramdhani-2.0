@@ -3,7 +3,12 @@
 
 <head>
 <script>
-    
+    let params = new URLSearchParams(location.search);
+    if(params.get('state')=="Success"){
+      alert("Ordered Successfully");
+      var newURL = location.href.split("?")[0];
+      window.history.pushState('object', document.title, newURL);
+    }
     var my_id=[];
     const ids = new Set();
 
@@ -75,7 +80,7 @@
         <li><a href="../Home.html#about_section">About</a></li>
         <!--
    -->
-        <li><a href="../logout.php">Logout</a></li>
+        <li><a href="../Home.html">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -100,7 +105,7 @@
   <div class="item_grid">
 
     <?php
-    $queryGetGrocery = "SELECT item_id,item_name,item_price,item_url from Items where stall_id=4";
+    $queryGetGrocery = "SELECT item_id,item_name,item_price,item_url from Items where stall_id=3";
     $runQueryGetGrocery = mysqli_query($con, $queryGetGrocery);
     $i = 0;
     while ($row = mysqli_fetch_assoc($runQueryGetGrocery)) {

@@ -7,7 +7,7 @@
   include("database/db.php");
 
   if (!isset($_SESSION['customer_email'])) {
-    header("location: customer_login.php");
+    header("location: Login.html");
   }
   $user = $_SESSION['customer_email'];
   ?>
@@ -65,7 +65,7 @@
         <li><a href="Home.html#about_section">About</a></li>
         <!--
    -->
-        <li><a href="Home.html">Logout</a></li>
+        <li><a href="logout.php">Logout</a></li>
       </ul>
     </div>
   </nav>

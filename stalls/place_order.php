@@ -65,5 +65,5 @@ if (mysqli_connect_errno())
         } 
         
         //echo "<script>alert('ordered successfully')</script>";
-        header("location: grocery_stall.php?state=Success");
+        header("location: ../Home.html?state=Success");
   ?>

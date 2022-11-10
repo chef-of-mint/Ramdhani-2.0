@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <script>
+    let params = new URLSearchParams(location.search);
+    if(params.get('state')=="Success"){
+      alert("Ordered Successfully");
+      var newURL = location.href.split("?")[0];
+      window.history.pushState('object', document.title, newURL);
+    }
+  </script>
   <title>Ramdhani 2.0</title>
   <link rel="icon" href="img/rd_logo_02.png" />
   <meta charset="utf-8" />
@@ -127,7 +135,7 @@
             </div>
             <div class="flip-card-back">
               <h3 class="bottom">Explore Tea of RD</h3>
-              <a href="stalls/tea_stall.html">Menu</a>
+              <a href="stalls/tea_stall.php">Menu</a>
             </div>
           </div>
         </div>
@@ -141,7 +149,7 @@
             </div>
             <div class="flip-card-back">
               <h3 class="bottom">Explore Rolls of RD</h3>
-              <a href="stalls/roll_stall.html">Menu</a>
+              <a href="stalls/roll_stall.php">Menu</a>
             </div>
           </div>
         </div>
@@ -169,7 +177,7 @@
             </div>
             <div class="flip-card-back">
               <h3 class="bottom">Best Snacks of ISM</h3>
-              <a href="stalls/snacks_stall.html">Menu</a>
+              <a href="stalls/snacks_stall.php">Menu</a>
             </div>
           </div>
         </div>
