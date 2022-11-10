@@ -93,9 +93,6 @@
   }
   body {
     background-image: url('img/about-section.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   
 
@@ -128,7 +125,7 @@
     height: 60px;
     line-height: 60px;
     width: 100vw;
-    z-index: 10;
+    z-index: 20;
   }
   
   .nav-wrapper {

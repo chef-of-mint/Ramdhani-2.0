@@ -153,12 +153,12 @@
             <td class="value"><b>Click to view</b></td>
           </tr>
           <?php
-          $queryGetOrder = "SELECT order_id,date from OrderXCustomer where customer_id='$customer_id'";
+          $queryGetOrder = "SELECT order_id,order_date from OrderXCustomer where customer_id='$customer_id'";
           $runQueryGetOrder = mysqli_query($con, $queryGetOrder);
           $i = 0;
           while ($row = mysqli_fetch_assoc($runQueryGetOrder)) {
             $order_id = $row['order_id'];
-            $date = $row['date'];
+            $date = $row['order_date'];
             $i++;
             echo '<tr onclick="myFunction(this)">
               <td class="lable">' . $order_id . ' # </td>

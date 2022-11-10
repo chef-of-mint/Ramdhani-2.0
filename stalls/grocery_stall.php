@@ -3,19 +3,35 @@
 
 <head>
 <script>
+    let params = new URLSearchParams(location.search);
+    if(params.get('state')=="Success"){
+      alert("Ordered Successfully");
+      var newURL = location.href.split("?")[0];
+      window.history.pushState('object', document.title, newURL);
+    }
     var my_id=[];
     const ids = new Set();
+
+    // empty cookie
+    myarray=Array.from(ids).join(',');
+    document.cookie = "my_cookie="+JSON.stringify(myarray);
+
+    
     function myfunc(btn){
       document.getElementsByClassName("bottom")[btn.id].classList.add("clicked");
-      ids.add(btn.id);
-      my_id = Array.from(ids).join(' ');
+      var item_id = document.getElementsByClassName("chupao")[btn.id].innerHTML;
+      // alert(item_id+" "+btn.id);
+      ids.add(item_id);
+      my_id = Array.from(ids).join(',');
       document.cookie = "my_cookie="+JSON.stringify(my_id);
     }
     function myremove(btn){
       document.getElementsByClassName("bottom")[(btn.id)].classList.remove("clicked");
       //alert(btn.id/100);
-      ids.delete(btn.id);
-      my_id = Array.from(ids).join(' ');
+      var item_id = document.getElementsByClassName("chupao")[btn.id].innerHTML;
+      ids.delete(item_id);
+      //ids.delete(btn.id);
+      my_id = Array.from(ids).join(',');
       document.cookie = "my_cookie="+JSON.stringify(my_id);
     }
   </script>
@@ -55,16 +71,16 @@
 
       <!-- Navbar Links -->
       <ul id="menu">
-        <li><a href="\Home.html">Home</a></li>
+        <li><a href="../Home.html">Home</a></li>
         <!--
    -->
-        <li><a href="/Home.html#menu_section">Menu</a></li>
+        <li><a href="../Home.html#menu_section">Menu</a></li>
         <!--
    -->
-        <li><a href="/Home.html#about_section">About</a></li>
+        <li><a href="../Home.html#about_section">About</a></li>
         <!--
    -->
-        <li><a href="/Home.html">Logout</a></li>
+        <li><a href="../Home.html">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -89,10 +105,11 @@
   <div class="item_grid">
 
     <?php
-    $queryGetGrocery = "SELECT item_name,item_price,item_url from Items where stall_id=4";
+    $queryGetGrocery = "SELECT item_id,item_name,item_price,item_url from Items where stall_id=4";
     $runQueryGetGrocery = mysqli_query($con, $queryGetGrocery);
     $i = 0;
     while ($row = mysqli_fetch_assoc($runQueryGetGrocery)) {
+      $item_id = $row['item_id'];
       $item_name = $row['item_name'];
       $item_price = $row['item_price'];
       $item_url = $row['item_url'];
@@ -105,6 +122,7 @@
               <div class="details">
                 <h3>' . $item_name . '</h3>
                 <p>£' . $item_price . '</p>
+                <p class="chupao">'.$item_id.'</p>
               </div>
               <div class="buy" id="'.$i.'" onclick="myfunc(this)" class="clicked"><i class="material-icons">add_shopping_cart</i></div>
             </div>

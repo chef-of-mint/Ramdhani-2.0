@@ -3,6 +3,9 @@ body {
   background: #343a40;
   font-family: sans-serif;
 }
+.chupao{
+  visibility: hidden;
+}
 .order_button {
   margin: 40px;
   display: flex;
