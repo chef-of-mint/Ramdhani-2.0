@@ -24,16 +24,19 @@ body{
     font-size: 18px;
     margin-right: 30px;
     font-family: 'Oswald';
+
 }
 .imgtext{
     position: absolute;
-    top: 85%;
+    top: 94%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20px;
     color: white;
     text-shadow: 6px 6px 5px #1E252B;
-    font-family: 'Oswald';
+    font-family: 'Impact';
+    display: inline-flex; /* keep the background color wrapped tight */
+    padding:4px;font-size:20px;background-color:rgba(95, 62, 26, 0.585);color:#ffffff;
 }
 #fourth{
  transform: translateX(100%);
@@ -220,7 +223,7 @@ img.bike{
 footer i{
     margin:20px;
     font-size: 30px;
-    color:#dbe0e6;
+    color:#8bbfff;
 }
 img.blur{
     filter: brightness(0.50);
