@@ -118,7 +118,7 @@ if (isset($_POST['add_product'])) {
       <div class="box-container">
 
          <?php
-         $queryShowProducts = "SELECT * FROM Items";
+         $queryShowProducts = "SELECT * FROM Items where stall_id='$stall_id'";
          $runQueryProducts = mysqli_query($con, $queryShowProducts);
 
          while ($row = mysqli_fetch_assoc($runQueryProducts)) {
