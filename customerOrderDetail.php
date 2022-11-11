@@ -70,7 +70,6 @@
               <td><b>' . $total_price . '</b></td>
           </tr>
           ';
-      $total_price += ($item_price) * ($order_quantity);
     } 
     else {
       echo "ERROR Loading!!!";

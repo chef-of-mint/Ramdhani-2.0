@@ -23,4 +23,3 @@ if (mysqli_connect_errno()) {
       echo "Email or password is incorrect, please try again!";
       // header("location: admin_login.php");
     }
-?>

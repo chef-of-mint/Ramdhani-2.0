@@ -22,4 +22,3 @@
                 echo "<script>alert('Email or password is incorrect, please try again!')</script>";
                 // header("location: Login.html");
             }
-?>

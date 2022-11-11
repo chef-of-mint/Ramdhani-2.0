@@ -19,4 +19,3 @@
         echo "<script>window.open('Login.html')</script>";
         header("location: Login.html");
     }
-?>
