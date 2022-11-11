@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <?php
   session_start();
   include("database/db.php");
@@ -17,7 +15,7 @@
   <link rel="stylesheet" href="Profile.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="orderDetails.css" />
   <title>Order Details</title>
 </head>
 
@@ -25,9 +23,11 @@
 
   <table id="order_details">
     <tr>
-      <th>Item Name</th>
-      <th>Quantity</th>
-      <th>Price</th>
+      <td><b>Item Name</b></td>
+      <td class="spacespace">spacespace</td>
+      <td><b>Quantity</b></td>
+      <td class="spacespace">spacespace</td>
+      <td><b>Price</b></td>
     </tr>
 
     <?php
@@ -52,7 +52,9 @@
         echo '
               <tr>
                   <td>' . $item_name . '</td>
+                  <td class="spacespace">spacespace</td>
                   <td>' . $order_quantity . '</td>
+                  <td class="spacespace">spacespace</td>
                   <td>' . ($item_price) * ($order_quantity) . '</td>
               </tr>
               ';
@@ -61,15 +63,17 @@
 
       echo '
           <tr>
-              <th>' . 'Total Price : ' . '</td>
-              <th>' . '' . '</td>
-              <th>' . $total_price . '</td>
+              <td><b>' . 'Total Price :   ' . '</b></td>
+              <td class="spacespace">spacespace</td>
+              <td class="spacespace">spacespace</td>
+              <td class="spacespace">spacespace</td>
+              <td><b>' . $total_price . '</b></td>
           </tr>
           ';
       $total_price += ($item_price) * ($order_quantity);
     } 
     else {
-      echo "error loading";
+      echo "ERROR Loading!!!";
     }
     ?>
   </table>

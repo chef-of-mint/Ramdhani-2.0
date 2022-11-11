@@ -29,7 +29,7 @@
 
       var order_id = currentRow.getElementsByTagName("td")[0].innerHTML;
       document.cookie = "order_id" + "=" + order_id;
-      var modal = document.getElementById('myModal');
+      var modal = document.getElementById('overlay');
       var span = document.getElementsByClassName("close")[0];
       modal.style.display = "block";
       span.onclick = function() {
@@ -173,15 +173,36 @@
       </table>
     </div>
   </div>
-  
-  <div id="myModal" class="modal_1" style="display:none;">
+
+<!-- <div id="overlay" onclick="off()">
+  <div id="text">Overlay Text</div>
+</div> -->
+
+<!-- <div style="padding:20px">
+  <h2>Overlay with Text</h2>
+  <button onclick="on()">Turn on overlay effect</button>
+</div> -->
+
+  <script>
+  function on() {
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
+  </script>
+
+
+
+  <div id="overlay" onclick="off()">
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <span class="close">×</span>
-        <h2>Order Details</h2>
+        <!-- <span class="close">×</span> -->
+        <h2 class="detail_h2">Order Details</h2>
       </div>
-      <iframe src="customerOrderDetail.php" height="200" width="300" title="Iframe Example"></iframe>
+      <iframe src="customerOrderDetail.php" height="400px" width="100%" title="Iframe Example"></iframe>
     </div>
   </div>
 

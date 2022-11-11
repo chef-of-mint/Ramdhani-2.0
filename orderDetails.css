@@ -1,0 +1,19 @@
+body {
+    background-image: url(img/rd.jpg);
+    margin: 20px;
+    font-family: var(--bs-body-font-family);
+    font-size: 25px;
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: #000000;
+    text-align: var(--bs-body-text-align);
+    background-color: aliceblue;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+#order_details{
+    margin: 20px;
+}
+.spacespace{
+    visibility: hidden;
+}
