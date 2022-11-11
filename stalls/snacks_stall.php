@@ -121,7 +121,7 @@
             <div class="left">
               <div class="details">
                 <h3>' . $item_name . '</h3>
-                <p>£' . $item_price . '</p>
+                <p>₹' . $item_price . '</p>
                 <p class="chupao">'.$item_id.'</p>
               </div>
               <div class="buy" id="'.$i.'" onclick="myfunc(this)" class="clicked"><i class="material-icons">add_shopping_cart</i></div>

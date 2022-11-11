@@ -41,6 +41,9 @@
         }
       }
     }
+    function add_money(){
+      
+    }
   </script>
 
 </head>
@@ -129,13 +132,13 @@
           echo '<tr>
 <td class="lable">Wallet Balance </td>
 <td class="invis">abcd</td>
-<td class="value">' . $customer_balance . ' $</td>
+<td class="value">₹ ' . $customer_balance . '</td>
 </tr>';
 
           ?>
         </tbody>
       </table>
-      <div class="add_button"><button class="button button1">Add Money</button></div>
+      <div class="add_button" onclick="add_money()"><button class="button button1">Add Money</button></div>
     </div>
   </div>
 

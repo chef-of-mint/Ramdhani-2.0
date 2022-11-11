@@ -1,3 +1,17 @@
+.ask_star{
+  display: flex;
+  margin: 100px;
+  color: rgb(30, 30, 29);
+ flex-direction: column;
+ align-items: center;
+}
+.ask_star p{
+  font-size: 30px;
+  background-color: #f0f8ff94;
+}
+.github-button{
+  transform: translateX(10px);
+}
 .container h2{
   color:#f8f9fa;
 }
@@ -14,11 +28,11 @@
   z-index: 1;
 }
 .devs {
-    margin-left: 50px;
-    display: grid;
-    grid-template-columns: 260px 260px 260px 260px;
-  column-gap: 50px;
-  grid-auto-flow: column;
+    margin: 50px;
+    display: flex;
+    /* grid-template-columns: 260px 260px 260px 260px;
+  grid-auto-flow: column; */
+  align-content: space-around;
 }
 .info{
     display: flex;
@@ -110,7 +124,6 @@
   body {
     background-image: url('img/dev_bg_3.jpg');
     background-position: center center;
-    background-repeat: no-repeat;
     background-size: cover;
   }
   
