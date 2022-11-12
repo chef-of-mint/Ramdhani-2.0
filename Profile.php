@@ -138,7 +138,7 @@
           ?>
         </tbody>
       </table>
-      <div class="add_button" onclick="add_money()"><button class="button button1">Add Money</button></div>
+      <div class="add_button" onclick="openForm()"><button class="button button1">Add Money</button></div>
     </div>
   </div>
 
@@ -176,24 +176,43 @@
       </table>
     </div>
   </div>
+<!-- Popup form -->
+  <div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
 
-<!-- <div id="overlay" onclick="off()">
-  <div id="text">Overlay Text</div>
-</div> -->
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
 
-<!-- <div style="padding:20px">
-  <h2>Overlay with Text</h2>
-  <button onclick="on()">Turn on overlay effect</button>
-</div> -->
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    
+    <label for="psw"><b>Amount to be added</b></label>
+    <input type="number" min="1" step="any" placeholder="Enter Amount" name="amnt" required>
 
+    <button type="submit" class="btn">Submit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<!-- Popup form -->
   <script>
   function on() {
-    document.getElementById("overlay").style.display = "block";
+    document.getElementById("overlay").style.display = "flex";
   }
 
   function off() {
     document.getElementById("overlay").style.display = "none";
   }
+
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+
+
   </script>
 
 
