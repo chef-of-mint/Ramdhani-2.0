@@ -6,7 +6,7 @@
 }
 
 body {
-	background: #f6f5f7;
+    background: #333940;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,6 +23,7 @@ h1 {
 
 h2 {
 	text-align: center;
+	color: #FFFFFF;
 }
 
 p {

@@ -34,7 +34,7 @@
    <section class="form-container">
 
       <form action="login_script.php" method="POST">
-         <h3>login now</h3>
+         <h3>Login As Administrator</h3>
          <input type="text" name="email" maxlength="50" required placeholder="enter your email" class="box">
          <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box">
          <input type="submit" value="login now" name="submit" class="btn">

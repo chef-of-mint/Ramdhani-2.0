@@ -178,8 +178,8 @@
   </div>
 <!-- Popup form -->
   <div class="form-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Login</h1>
+  <form action="add_money.php" class="form-container">
+    <h1>Credit Wallet</h1>
 
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>

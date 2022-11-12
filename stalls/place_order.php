@@ -55,7 +55,7 @@ if (mysqli_connect_errno())
         $query = "INSERT INTO `OrderXCustomer` (`order_id`,`customer_id`) VALUES ('$newOrderId','$customer_id')";
         mysqli_query($con,$query); 
 
-         echo count($my_array);
+         //echo count($my_array);
        
         for ($j = 0; $j < count($my_array); $j++) { 
             // echo $my_array[$j];
