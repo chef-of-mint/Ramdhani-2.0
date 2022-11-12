@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
-    background: #343a40;
+    background: #333940;
 }
 .justify-content-center{
     display: flex;
@@ -28,7 +28,7 @@ body{
 }
 .imgtext{
     position: absolute;
-    top: 94%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 20px;
@@ -223,7 +223,7 @@ img.bike{
 footer i{
     margin:20px;
     font-size: 30px;
-    color:#8bbfff;
+    color:#75777a;
 }
 img.blur{
     filter: brightness(0.50);
