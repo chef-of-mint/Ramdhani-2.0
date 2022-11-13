@@ -5,11 +5,13 @@ body {
     font-size: 25px;
     font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
-    color: #000000;
+    color: #ffffff;
     text-align: var(--bs-body-text-align);
-    background-color: aliceblue;
+    background-color: #333940;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+    display: flex;
+    align-content: flex-start;
 }
 #order_details{
     margin: 20px;

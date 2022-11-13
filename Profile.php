@@ -211,11 +211,7 @@
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
     }
-
-
   </script>
-
-
 
   <div id="overlay" onclick="off()">
     <!-- Modal content -->
@@ -227,7 +223,11 @@
       <iframe src="customerOrderDetail.php" height="400px" width="100%" title="Iframe Example"></iframe>
     </div>
   </div>
-
+  <div class="loading">
+  <div class="image">
+  <img src="img/rd_logo_02.png" alt="RD LOGO">    
+  </div>
+</div>
 </body>
 
 </html>

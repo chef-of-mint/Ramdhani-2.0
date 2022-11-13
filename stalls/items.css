@@ -2,6 +2,9 @@ html,
 body {
   background: #343a40;
   font-family: sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .chupao{
   visibility: hidden;
@@ -37,13 +40,11 @@ body {
 }
 .item_grid {
   padding-top: 65px;
-  padding-left: 60px;
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 500px 500px;
-  column-gap: 50px;
-  row-gap: 40px;
-  grid-auto-flow: row;
+  padding-left: 50px;
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .wrapper {
   width: 300px;
@@ -551,6 +552,70 @@ a {
 
 
 
+.loading {
+    
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #333940;
+  z-index: -1; 
+  opacity: 0;  
+  
+ 
+  animation-delay: 0;
+  animation-name: loading;
+  animation-duration: 2.5s;
+  animation-fill-mode: fowards;
+  animation-iteration-count: 1; 
+  animation-timing-function: ease-out;
+  
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+
+.loading .image {
+  width: auto;
+  height: auto;
+  border-radius: 200px;
+  overflow: hidden;
+  
+  animation: rotation 2s linear infinite; 
+  transform-origin: center; 
+}
+
+.loading .image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+@keyframes loading {
+  from {
+    opacity: 1;
+    z-index: 100;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 

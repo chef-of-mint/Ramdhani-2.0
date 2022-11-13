@@ -61,7 +61,7 @@
       <!-- Navbar Logo -->
       <div class="logo">
         <!-- Logo Placeholder for Inlustration -->
-        <a href="/Profile.html">Items Menu</a>
+        <a href="grocery_stall.php">Grocery Menu</a>
       </div>
 
       <!-- Navbar Links -->
@@ -75,7 +75,6 @@
         <li><a href="../Home.html#about_section">About</a></li>
         <!--
    -->
-        <li><a href="../logout.php">Logout</a></li>
       </ul>
     </div>
   </nav>
@@ -93,7 +92,6 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
 
@@ -154,6 +152,10 @@
   </div>
   
   <div class="order_button"><form action="place_order.php" method="post"><input class="button button1" name="btn-po" type="submit" value="Place Order"></form></div>
+  <div class="loading">
+    <div class="image">
+    <img src="rd_logo_02.png">    
+  </div>
 </body>
 
 </html>
