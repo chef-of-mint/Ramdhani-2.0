@@ -1,18 +1,18 @@
 <?php
-  session_start();
-  $con = mysqli_connect("sql12.freesqldatabase.com","sql12530306","NcCwFRsvdq","sql12530306");
+        ob_start();
 
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to Database: " . mysqli_connect_error();
-  }
-  if (!isset($_SESSION['customer_email'])) {
-    header("location: customer_login.php");
-  }
-  $user = $_SESSION['customer_email'];
-  
-  ?>
-<?php
+        session_start();
+        $con = mysqli_connect("sql12.freesqldatabase.com","sql12530306","NcCwFRsvdq","sql12530306");
+      
+      if (mysqli_connect_errno())
+        {
+        echo "Failed to connect to Database: " . mysqli_connect_error();
+        }
+        if (!isset($_SESSION['customer_email'])) {
+          header("location: customer_login.php");
+        }
+        $user = $_SESSION['customer_email'];
+
        // echo "alert('hi')";
         $items=$_COOKIE['my_cookie'];
         //echo $items;
@@ -51,6 +51,33 @@ if (mysqli_connect_errno())
       //    echo "<br>";
       //    echo $customer_id;
 
+      $totalPrice =0;
+
+      for($i=0;$i< count($my_array); $i++){
+        $queryGetItemPrice = "SELECT item_price FROM Items where item_id = '$my_array[$i]'";
+        $runQueryGetItemPrice = mysqli_query($con,$queryGetItemPrice);
+        $rowx = mysqli_fetch_assoc($runQueryGetItemPrice);
+        $totalPrice = $totalPrice + $rowx['item_price'];
+      }
+
+      // $queryGetCustomerBalance = "SELECT balance FROM Customer where customer_id = '$customer_id'";
+      // $runQueryGetCustomerBalance = mysqli_query($con,$queryGetCustomerBalance);
+      // $run = mysqli_fetch_assoc($runQueryGetCustomerBalance);
+      // $currentCustomerBalance = $row['balance'];
+
+      $getBalance = "SELECT balance FROM Customer WHERE customer_email='$user'";
+      $runQueryBal = mysqli_query($con, $getBalance);
+      $rowi = mysqli_fetch_assoc($runQueryBal);
+      $currentCustomerBalance = $rowi['balance'];
+
+      // echo $currentCustomerBalance;
+      // echo "<br>";
+      // echo $totalPrice;
+
+      if($currentCustomerBalance < $totalPrice){
+        header("location: ../Home.html?state=Failure");
+        exit;
+      }
 
         $query = "INSERT INTO `OrderXCustomer` (`order_id`,`customer_id`) VALUES ('$newOrderId','$customer_id')";
         mysqli_query($con,$query); 
@@ -63,7 +90,12 @@ if (mysqli_connect_errno())
             $queryOrderXItems = "INSERT INTO OrderXItems VALUES('$newOrderId','$my_array[$j]','1','3')";
             mysqli_query($con,$queryOrderXItems); 
         } 
-        
+        $newBalance = $currentCustomerBalance - $totalPrice;
+        $queryUpdateCustomerBalance = "UPDATE Customer set balance = '$newBalance' where customer_id = '$customer_id'";
+        mysqli_query($con,$queryUpdateCustomerBalance);
         //echo "<script>alert('ordered successfully')</script>";
         header("location: ../Home.html?state=Success");
+
+        ob_end_flush();
+        exit;
   ?>

@@ -9,6 +9,11 @@
       var newURL = location.href.split("?")[0];
       window.history.pushState('object', document.title, newURL);
     }
+    else if(params.get('state') == "Failure"){
+      alert("Your Balance is less than required");
+      var newURL = location.href.split("?")[0];
+      window.history.pushState('object', document.title, newURL);
+    }
   </script>
   <title>Ramdhani 2.0</title>
   <link rel="icon" href="img/rd_logo_02.png" />

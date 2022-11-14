@@ -509,7 +509,7 @@
    
     animation-delay: 0;
     animation-name: loading;
-    animation-duration: 2.5s;
+    animation-duration: 1.75s;
     animation-fill-mode: fowards;
     animation-iteration-count: 1; 
     animation-timing-function: ease-out;
