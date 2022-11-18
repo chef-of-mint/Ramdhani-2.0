@@ -35,10 +35,20 @@ At the end of the day, the technologies implemented in this project is SQL, PHPM
 ![App Screenshot](https://i.postimg.cc/WbNRtpfZ/Screenshot-3.png)
 ###  Stalls
 ![App Screenshot](https://i.postimg.cc/vZKCPr87/Screenshot-4.png)
+### Menu
+![App Screenshot](https://i.postimg.cc/158VNWZT/Screenshot-from-2022-11-18-22-58-36.png)
 ### User Profile
 ![App Screenshot](https://i.postimg.cc/zfR64y3s/Screenshot-5.png)
+
+### Admin Product view
+![App Screenshot](https://i.postimg.cc/rpNDL3Sd/Screenshot-from-2022-11-18-23-00-17.png)
+
 ### Add Product 
-![App Screenshot](https://i.postimg.cc/13XLcCS5/Screenshot-6.png)
+![App Screenshot](https://i.postimg.cc/W4G2kZ3x/Screenshot-from-2022-11-18-23-00-45.png)
+### Update product
+![App Screenshot](https://i.postimg.cc/vZ910cTt/Screenshot-from-2022-11-18-23-00-36.png)
+
+
 
 
 
