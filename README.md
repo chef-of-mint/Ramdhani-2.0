@@ -1,5 +1,4 @@
-
-![Logo](https://i.postimg.cc/MT2B2xgn/rd-logo-02.png)
+![Logo](https://i.postimg.cc/QCZqCRFp/rd-logo-02.png)
 
 
 # RAMDHANI 2.0
